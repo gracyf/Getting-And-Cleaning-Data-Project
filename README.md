@@ -43,3 +43,19 @@ tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
 
+Script Functionality 
+====================
+This section explains how the data was obtained and cleaned and processed programmatically using R SCRIPTS
+
+- Download the Zip file and unzip its contents. Using download.file function, the zipped file was downloaded from the given URL. These files were unzipped into the current working directory. 
+- Read the files provided in the unzipped directory into R the required text files as data frames. All the required text files like label files, feature_info files, activity_labels file and train set ( x & Y ) and test set t (X & Y ) files were read into R using the fread function.
+- Rename the columns to appropriate variable names. The column names in test and train set were labelled using values of features files 
+- Combine the Train and the Test set
+- Correct the variable names. Variable names for subjects column was renamed to subject.
+- Add the activity data and rename the column. The dataframe was combined with the activity table.
+- Resulting Data Frame. The resulting dataframe was formed.
+- Select the variable names with mean and std value only from the result data frame.
+- Provide descriptive activity names. The activity names table was referenced and used to change the values in the result data frame.
+- Provide descriptive variable names. The variable names was corrected to drop the special characters and formed a meaning full variable name.
+- Groupby subject and activity and print the mean of each variable from the result data frame.
+- View provides a very tidy small data frame out of the collected data.
